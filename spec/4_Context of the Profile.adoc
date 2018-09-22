@@ -1,4 +1,4 @@
-= Context of the Profile
+= 4.  Context of the Profile
 
 The Director of NGA, as Functional Manager for Geospatial Intelligence, has directed a transformation of the architecture that supports the NSG. This transformation is intended to move from a systems-centric to a network-based, data-centric architecture. In support of this direction, this interoperability standard defines the NSG conditionality for each unique provision in the OGC GeoPackage 1.0.1 Encoding standard.
 
