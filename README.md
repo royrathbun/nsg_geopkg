@@ -1,5 +1,6 @@
 # nsg_geopkg
 NSG Profile of OGC Geopackage encoding standard
+
 NGA.STND.0051_2.1_GEOPKG
 
 
@@ -8,7 +9,7 @@ NGA.STND.0051_2.1_GEOPKG
 
 
 
-image:extracted-media/media/image1.jpeg[image,width=117,height=116]
+media/media/image1.jpeg[image,width=117,height=116]
 
 ___________________________________________________________________
 
