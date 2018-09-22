@@ -31,47 +31,25 @@ ___________________________________________________________________
 *Geospatial Intelligence Standards Center of Excellence*
 
 # Table of Contents
-
-
-
-1. Introduction 5  
-
-2. Scope 5  
-
-3. References 7  
-
-4. Context of the Profile 10  
-
-5. Compliance 10  
-
-6. GeoPackages 12  
-
-  6.1. File Names 12  
-
-  6.2. Extensions 13  
-
-7. Tiles and Features 13
-
-  7.1. Coordinate Reference Systems 13
-
-  7.2. Well Known Text 16
-
-  7.3. Metadata 23
-
-  7.4. Data Validity Constraints 31
-
-8. Tiles 34
-
-  8.1. Tile Size 34
-
-  8.2. Zoom Levels 34
-
-  8.3. Bounding Boxes 34
-
-9. Features 35
-
-  9.1. GeoPackage Extensions 35
-
+1.  Introduction 5  
+2.  Scope 5  
+3.  References 7  
+4.  Context of the Profile 10  
+5.  Compliance 10  
+6.  GeoPackages 12    
+  6.1. File Names 12    
+  6.2. Extensions 13    
+7. Tiles and Features 13    
+  7.1. Coordinate Reference Systems 13  
+  7.2. Well Known Text 16  
+  7.3. Metadata 23  
+  7.4. Data Validity Constraints 31  
+8. Tiles 34  
+  8.1. Tile Size 34  
+  8.2. Zoom Levels 34  
+  8.3. Bounding Boxes 34  
+9. Features 35  
+  9.1. GeoPackage Extensions 35  
 Annex A GeoPackage to DoD DSE MDR CRS Dictionary Crosswalk 36
 
 Annex B Metadata Reference Example 37
