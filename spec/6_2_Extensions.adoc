@@ -1,4 +1,4 @@
-== *6.1 Extensions*
+== *6.2 Extensions*
 
 Every GeoPackage must contain tiles and/or features per OGC GeoPackage Req 17. Extended GeoPackages with SQL tables not defined in the OGC GeoPackage Encoding Standard SHALL register such tables in the gpkg_extensions table.
 
