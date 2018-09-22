@@ -493,7 +493,7 @@ ID["EPSG","5715"]]
 |*description* |Depth related to the average height of the surface of the sea at a tide station for all stages of the tide over a 19-year period, usually determined from hourly height readings measured from a fixed predetermined reference level, usually by survey techniques.
 |==================================================================================================================================================================================================================================================================================
 
-NSG Req 10: Compound CRS definitions SHALL ONLY be used for vector features with Z geometry values.
+*_NSG Req 10: Compound CRS definitions SHALL ONLY be used for vector features with Z geometry values._*
 
 [[_Ref408832659]]Table 18: Compound CRS Definition Template
 
@@ -527,7 +527,7 @@ ID[“NSG”,”<Comp CRS Code>”]]
 |*description* |Geodetic position based on the World Geodetic System 1984 (WGS 84), extended by height position based on the Earth Gravity Model 2008 (EGM08).
 |=============================================================================================================================================================
 
-NSG Req 11: Template <parameters> <Comp CRS Code> and <Compound CRS Name> in Table 18 above SHALL be replaced with parameter values from Table 19 below. Template <parameters> <Head CRS> and <Tail CRS> in Table 18 above SHALL be replaced with definitions from the definition column values in the tables referenced from Table 19. These replacements SHALL be used to define compound CRS definitions.
+*_NSG Req 11: Template <parameters> <Comp CRS Code> and <Compound CRS Name> in Table 18 above SHALL be replaced with parameter values from Table 19 below. Template <parameters> <Head CRS> and <Tail CRS> in Table 18 above SHALL be replaced with definitions from the definition column values in the tables referenced from Table 19. These replacements SHALL be used to define compound CRS definitions._*
 
 For example, the compound CRS definition for WGS84 Geographic 2D Height (EGM08) created by such parameter replacement is shown in the following text box.
 
