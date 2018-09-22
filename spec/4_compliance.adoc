@@ -1,4 +1,4 @@
-= Compliance
+= 5. Compliance
 
 OGC develops test suites for vendors to use as a part of the OGC’s Compliance Interoperability Test and Evaluation (CITE) certification program. The NSG compliance test for GeoPackage 1.0 will be based on the same software used for OGC’s CITE test engines. The NSG compliance test suite for GeoPackage 1.0 is currently under development.
 
