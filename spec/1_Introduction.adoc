@@ -1,4 +1,4 @@
-= Introduction
+= 1.0 Introduction
 
 This Interoperability Standard identifies and tailors the implementable provisions prescribed for the National System for Geospatial-Intelligence (NSG) for a GeoPackage based on the Open Geospatial Consortium (OGC®) GeoPackage Encoding Standard with Corrigendum, Reference Number OGC 12-128r12, version 1.1 dated 2015-08-04, in accordance with the provisions of Clause 2.5, Requirement 78-84 and Annex I for registered extensions of that Standard.
 
