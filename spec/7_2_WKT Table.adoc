@@ -1,5 +1,3 @@
-* Text Box
-+
 --
  COMPOUNDCRS[
   “WGS84 Height (EGM08)”,
