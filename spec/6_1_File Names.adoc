@@ -26,4 +26,4 @@ The example below provides further guidance on file names for NSG GeoPackages:
 
 GeoPackage versions SHOULD be updated in a consistent manner. Minor version updates (“v1-1”) SHOULD be used to indicate that new features and/or tiles have been added to the existing raster tile pyramid or feature data set. Major version updates (“v2-0”) SHOULD be used to indicate that the tiles and/or features are substantially different than in the previous version.
 
-NSG Req 1: GeoPackages that contains NSG data SHALL use the “gpkg” file extension. They SHALL NOT use the “gpkx” file extension to indicate that they are Extended GeoPackages.
+*_NSG Req 1: GeoPackages that contains NSG data SHALL use the “gpkg” file extension. They SHALL NOT use the “gpkx” file extension to indicate that they are Extended GeoPackages._*
