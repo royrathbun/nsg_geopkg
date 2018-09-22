@@ -1,5 +1,4 @@
-# nsg_geopkg
-NSG Profile of OGC Geopackage encoding standard
+# NSG Profile of OGC Geopackage encoding standard
 
 NGA.STND.0051_2.1_GEOPKG
 
