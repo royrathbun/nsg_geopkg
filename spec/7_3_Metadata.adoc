@@ -726,7 +726,7 @@ a|
 |tile |row/col |attribute |‘cell’
 |===========================================================================================================
 
-*_NSG Req 17: Data products contained in a GeoPackage SHALL be identified using component elements of:_*  
+.*_NSG Req 17: Data products contained in a GeoPackage SHALL be identified using component elements of:_*  
 * *_/nas:MD_Metadata/gmd:identificationInfo/nas:MD_DataIdentification/gmd:citation_*
 * *_/nas:MD_Metadata/gmd:identificationInfo/nas:MD_DataIdentification/gmd:abstract_*  
 * *_/nas:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage_*  
