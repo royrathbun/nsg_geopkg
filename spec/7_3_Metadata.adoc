@@ -4,9 +4,7 @@ This clause requires storage of NMIS v2.2 metadata as XML in GeoPackages that co
 
 The structure and allowed content values of NSG metadata for a GeoPackage are specified by the “National System for Geospatial Intelligence Metadata Implementation Specification (NMIS) - Part 2: XML Exchange Schema, Version 2.2.0, 29 January 2015”.
 
-_NSG Req 12: A GeoPackage SHALL contain one complete NMIS metadata XML instance document that describes the entire GeoPackage in a gpkg_metadata table row with the contents shown in_
-
-_Table_ 20 _below._ [[_Ref396904608]]
+*_NSG Req 12: A GeoPackage SHALL contain one complete NMIS metadata XML instance document that describes the entire GeoPackage in a gpkg_metadata table row with the contents shown in Table 20 below._*
 
 Table 20: gpkg_metadata Table Contents - Entire GeoPackage
 
@@ -20,11 +18,9 @@ Table 20: gpkg_metadata Table Contents - Entire GeoPackage
 |metadata |metadata |NMIS v2.2 metadata instance document
 |=================================================================================================================================
 
-NSG Req 13: The gpkg_metadata table row with the values shown in
+*_NSG Req 13: The gpkg_metadata table row with the values shown in Table 20 above SHALL be associated with the complete GeoPackage by a gpkg_metadata_reference table row with the contents shown in Table 21 below._*
 
-Table 20 above SHALL be associated with the complete GeoPackage by a gpkg_metadata_reference table row with the contents shown in Table 21 below.
-
-[[_Ref396906174]]Table 21: gpkg_metadata_reference Table Contents - Entire GeoPackage
+Table 21: gpkg_metadata_reference Table Contents - Entire GeoPackage
 
 [cols=",,",options="header",]
 |=====================================================================================================================================================================================
@@ -676,7 +672,7 @@ nas:capcoMarking @ism:ownerProducer
 
 A GeoPackage MAY contain additional NMIS metadata XML instance documents or fragments that describe particular tables or table row, column, or row/column values in a GeoPackage with the contents shown in Table 23.
 
-[[_Ref396910961]]Table 23: gpkg_metadata Table Contents - Partial GeoPackage
+Table 23: gpkg_metadata Table Contents - Partial GeoPackage
 
 [cols=",,",options="header",]
 |=================================================================================================================================
@@ -688,9 +684,9 @@ A GeoPackage MAY contain additional NMIS metadata XML instance documents or frag
 |metadata |metadata |NMIS v2.2 metadata instance document or fragment
 |=================================================================================================================================
 
-_*NSG Req 15: Any gpkg_metadata table row with the values shown in*_ _*Table 23 SHALL be associated with a GeoPackage user data table, and MAY be associated with a particular row and/or column in that table by a gpkg_metadata_reference table row with the contents shown in*_ _*Table 24 below. Metadata in gpkg_metadata table row that applies to multiple GeoPackage table, row and/or column content items SHALL be associated with those items by more than one gpkg_metadata_reference table row with the contents shown in*_ _*Table 24.*_
+_*NSG Req 15: Any gpkg_metadata table row with the values shown in Table 23 SHALL be associated with a GeoPackage user data table, and MAY be associated with a particular row and/or column in that table by a gpkg_metadata_reference table row with the contents shown in Table 24 below. Metadata in gpkg_metadata table row that applies to multiple GeoPackage table, row and/or column content items SHALL be associated with those items by more than one gpkg_metadata_reference table row with the contents shown in Table 24._*
 
-[[_Ref396911551]]Table 24: gpkg_metadata_reference Table Contents - Partial GeoPackage
+Table 24: gpkg_metadata_reference Table Contents - Partial GeoPackage
 
 [cols=",,",options="header",]
 |=====================================================================================================================================================================================================================================
@@ -730,11 +726,10 @@ a|
 |tile |row/col |attribute |‘cell’
 |===========================================================================================================
 
-*_NSG Req 17: Data products contained in a GeoPackage SHALL be identified using component elements of:
-
-* /nas:MD_Metadata/gmd:identificationInfo/nas:MD_DataIdentification/gmd:citation
-* /nas:MD_Metadata/gmd:identificationInfo/nas:MD_DataIdentification/gmd:abstract
-* /nas:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage_*
+*_.NSG Req 17: Data products contained in a GeoPackage SHALL be identified using component elements of:
+  - /nas:MD_Metadata/gmd:identificationInfo/nas:MD_DataIdentification/gmd:citation
+  - /nas:MD_Metadata/gmd:identificationInfo/nas:MD_DataIdentification/gmd:abstract
+  - /nas:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage_*
 
 *_NSG Req 18: If an entire GeoPackage constitutes a data product, then the component elements above that describe it SHALL be in the NMIS metadata that applies to the entire GeoPackage as shown in Table 20. If particular tables in a GeoPackage constitute separate data products, then the component elements that describe those data products SHALL be in the NMIS metadata as shown in Table 23 that applies to those tables._*
 
