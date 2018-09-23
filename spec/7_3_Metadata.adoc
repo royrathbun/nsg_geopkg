@@ -1,4 +1,4 @@
-== Metadata
+== 7.3 Metadata
 
 This clause requires storage of NMIS v2.2 metadata as XML in GeoPackages that contain NSG data, and specifies use of particular metadata values in certain conditions per the “National System for Geospatial Intelligence Metadata Foundation (NMF) – Part 1: Conceptual Schema Profile, Version 2.2, 23 September 2014”.
 
@@ -726,10 +726,10 @@ a|
 |tile |row/col |attribute |‘cell’
 |===========================================================================================================
 
-*_.NSG Req 17: Data products contained in a GeoPackage SHALL be identified using component elements of:
-  - /nas:MD_Metadata/gmd:identificationInfo/nas:MD_DataIdentification/gmd:citation
-  - /nas:MD_Metadata/gmd:identificationInfo/nas:MD_DataIdentification/gmd:abstract
-  - /nas:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage_*
+.*_NSG Req 17: Data products contained in a GeoPackage SHALL be identified using component elements of:  
+  /nas:MD_Metadata/gmd:identificationInfo/nas:MD_DataIdentification/gmd:citation  
+  /nas:MD_Metadata/gmd:identificationInfo/nas:MD_DataIdentification/gmd:abstract  
+  /nas:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage_*  
 
 *_NSG Req 18: If an entire GeoPackage constitutes a data product, then the component elements above that describe it SHALL be in the NMIS metadata that applies to the entire GeoPackage as shown in Table 20. If particular tables in a GeoPackage constitute separate data products, then the component elements that describe those data products SHALL be in the NMIS metadata as shown in Table 23 that applies to those tables._*
 
