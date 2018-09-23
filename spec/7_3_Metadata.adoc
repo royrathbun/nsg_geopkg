@@ -684,7 +684,7 @@ Table 23: gpkg_metadata Table Contents - Partial GeoPackage
 |metadata |metadata |NMIS v2.2 metadata instance document or fragment
 |=================================================================================================================================
 
-_*NSG Req 15: Any gpkg_metadata table row with the values shown in Table 23 SHALL be associated with a GeoPackage user data table, and MAY be associated with a particular row and/or column in that table by a gpkg_metadata_reference table row with the contents shown in Table 24 below. Metadata in gpkg_metadata table row that applies to multiple GeoPackage table, row and/or column content items SHALL be associated with those items by more than one gpkg_metadata_reference table row with the contents shown in Table 24._*
+*_NSG Req 15: Any gpkg_metadata table row with the values shown in Table 23 SHALL be associated with a GeoPackage user data table, and MAY be associated with a particular row and/or column in that table by a gpkg_metadata_reference table row with the contents shown in Table 24 below. Metadata in gpkg_metadata table row that applies to multiple GeoPackage table, row and/or column content items SHALL be associated with those items by more than one gpkg_metadata_reference table row with the contents shown in Table 24._*
 
 Table 24: gpkg_metadata_reference Table Contents - Partial GeoPackage
 
