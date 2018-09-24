@@ -70,8 +70,9 @@ Figure 1: GeoPackage Metadata References
 
 
 
-image:extracted-media/media/image2.png[GeoPackage Metadata References.png,width=363,height=320]
+image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/image2.png[GeoPackage Metadata References]
 
 
 
 Figures 2 and 3 provide example XML instance documents for complete NMIS v2.2
+
