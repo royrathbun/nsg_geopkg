@@ -74,5 +74,320 @@ image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/image2.png[GeoP
 
 
 
-Figures 2 and 3 provide example XML instance documents for complete NMIS v2.2
+Figures 2 and 3 provide example XML instance documents for complete NMIS v2.2  
+
+1.  <!-- BEGIN EXAMPLE 1-->
+
+2.  *<?xml* version="1.0" encoding="utf-8"*?>*  
+
+3.  *<nas:MD_Metadata* xmlns:nas="http://metadata.ces.mil/dse/ns/GSIP/5.0/nas" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ism="urn:us:gov:ic:ism" xmlns:ntk="urn:us:gov:ic:ntk" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ism:DESVersion="9" ism:resourceElement="true" ism:createDate="2017-05-11" ism:classification="U" ism:ownerProducer="USA" ntk:DESVersion="7"*>*  
+
+4.    *<gmd:hierarchyLevel>*  
+
+5.      *<gmd:MD_ScopeCode* codeList="http://api.nsgreg.nga.mil/codelist/ScopeCode" codeListValue="series" */>*  
+
+6.    *</gmd:hierarchyLevel>*  
+
+7.    *<gmd:hierarchyLevelName>*  
+
+8.      *<nas:ScopeAmplificationCode* codeList="http://api.nsgreg.nga.mil/codelist/ScopeAmplificationCode" codeListValue="dataset"*/>*  
+
+9.    *</gmd:hierarchyLevelName>*  
+
+10.   *<gmd:contact>*  
+
+11.     *<gmd:CI_ResponsibleParty>*  
+
+12.         *<gmd:organisationName>*  
+
+13.             **<gco:CharacterString>**Army Geospatial Center*</gco:CharacterString>* 
+
+14.         *</gmd:organisationName>*  
+
+15.         *<gmd:role>*  
+
+16.             *<gmd:CI_RoleCode* codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="publisher"*/>*
+
+17.         *</gmd:role>*  
+
+18.     *</gmd:CI_ResponsibleParty>*  
+
+19.   *</gmd:contact>*  
+
+20.   *<gmd:dateStamp>*  
+
+21.     **<gco:Date>**2017-05-11*</gco:Date>*
+
+22.   *</gmd:dateStamp>*  
+
+23.   *<gmd:metadataStandardName>*  
+
+24.     *<nas:MetadataStandardNameCode* codeList="http://api.nsgreg.nga.mil/codelist/MetadataStandardNameCode" codeListValue="nsgMetadataFoundation"*/>*  
+
+25.   *</gmd:metadataStandardName>*  
+
+26.   *<gmd:metadataStandardVersion>*  
+
+27.     **<nas:MetadataStandardVersion>**2.2.0*</nas:MetadataStandardVersion>*  
+
+28.   *</gmd:metadataStandardVersion>*  
+
+29.   *<gmd:referenceSystemInfo>*  
+
+30.     *<gmd:MD_ReferenceSystem>*  
+
+31.       *<gmd:referenceSystemIdentifier>*  
+
+32.         *<gmd:RS_Identifier>*  
+
+33.           *<gmd:code>*  
+
+34.             **<gco:CharacterString>**4326*</gco:CharacterString>*  
+
+35.           *</gmd:code>*  
+
+36.           *<gmd:codeSpace>*  
+
+37.             **<gco:CharacterString>**EPSG*</gco:CharacterString>*  
+
+38.           *</gmd:codeSpace>*  
+
+39.         *</gmd:RS_Identifier>*  
+
+40.       *</gmd:referenceSystemIdentifier>*  
+
+41.     *</gmd:MD_ReferenceSystem>*  
+
+42.   *</gmd:referenceSystemInfo>*  
+
+43.   *<gmd:identificationInfo>*  
+
+44.     *<nas:MD_DataIdentification>*  
+
+45.         *<gmd:citation>*  
+
+46.             *<gmd:CI_Citation>*  
+
+47.                 *<gmd:title>*  
+
+48.                 **<gco:CharacterString>**Tiles_table*</gco:CharacterString>*
+
+49.                 *</gmd:title>*  
+
+50.                 *<gmd:date>*  
+
+51.                 *<gmd:CI_Date>*  
+
+52.                     *<gmd:dateTime>*  
+
+53.                         **<gco:DateTime>**2017-06-05T13:40:00*</gco:Date>*
+
+54.                     *</gmd:date>*  
+
+55.                     *<gmd:dateType>*  
+
+56.                         *<gmd:CI_DateTypeCode* codeList="http://api.nsgreg.nga.mil/codelist/DateTypeCode" codeListValue="creation"*/>*   
+
+57.                     *</gmd:dateType>*   
+
+58.                 *</gmd:CI_Date>*  
+
+59.                 *</gmd:date>*  
+
+60.             *</gmd:CI_Citation>*  
+
+61.         *</gmd:citation>*  
+
+62.         *<gmd:abstract>*  
+
+63.             **<gco:CharacterString>**Description of tile/feature set descibed in current gmd:identificationInfo node.**</gco:CharacterString>**<
+
+64.         *</gmd:abstract>*  
+
+65.         *<gmd:pointOfContact>*  
+
+66.             *<gmd:CI_ResponsibleParty>*  
+
+67.                 *<gmd:organisationName>*  
+
+68.                     **<gco:CharacterString>**National Geospatial Intelligence Agency*</gco:CharacterString>* 
+
+69.                 *</gmd:organisationName>*  
+
+70.                 *<gmd:role>*  
+
+71.                     *<gmd:CI_RoleCode* codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="publisher"*/>*  
+
+72.                 *</gmd:role>*  
+
+73.             *</gmd:CI_ResponsibleParty>*  
+
+74.         *</gmd:pointOfContact>*  
+
+75.         *<gmd:resourceConstraints* -->  
+
+76.             *<nas:MD_SecurityConstraints>*  
+
+77.                 *<gmd:classification>*  
+
+78.                     *<gmd:MD_ClassificationCode* codeList="http://api.nsgreg.nga.mil/codelist/ClassificationCode" codeListValue="unclassified"*/>*  
+
+79.                 *</gmd:classification>*  
+
+80.                 *<gmd:classificationSystem>*  
+
+81.                     **<nas:ClassificationSystem>**US CAPCO*</nas:ClassificationSystem>*  
+
+82.                 *</gmd:classificationSystem>*  
+
+83.                 *<nas:capcoMarking* ism:classification="U" ism:ownerProducer="USA"*/>*  
+
+84.             *</nas:MD_SecurityConstraints>*  
+
+85.         *</gmd:resourceConstraints>*  
+
+86.         *<gmd:language>*  
+
+87.             *<gmd:LanguageCode* codeList="http://api.nsgreg.nga.mil/codelist/ISO639-2" codeListValue="eng"*/>*  
+
+88.         *</gmd:language>*  
+
+89.         *<gmd:characterSet>*  
+
+90.             *<gmd:MD_CharacterSetCode* codeList="http://api.nsgreg.nga.mil/codelist/CharacterSetCode" codeListValue="utf8"*/>*  
+
+91.         *</gmd:characterSet>*  
+
+92.         *<gmd:extent>*  
+
+93.             *<gmd:EX_Extent>*  
+
+94.                 *<gmd:geographicElement>*  
+
+95.                 *<gmd:EX_GeographicBoundingBox>*  
+
+96.                         *<gmd:westBoundLongitude>*  
+
+97.                             *<gco:Decimal>*-106.5*</gco:Decimal>*  
+
+98.                         *</gmd:westBoundLongitude>*  
+
+99.                         *<gmd:eastBoundLongitude>*  
+
+100.                             *<gco:Decimal>*-106.4*</gco:Decimal>*  
+
+101.                         *</gmd:eastBoundLongitude>*  
+
+102.                         *<gmd:southBoundLatitude>*  
+
+103.                             **<gco:Decimal>**32.1*</gco:Decimal>*  
+
+104.                         *</gmd:southBoundLatitude>*  
+
+105.                         *<gmd:northBoundLatitude>*  
+
+106.                             **<gco:Decimal>**32.2*</gco:Decimal>*  
+
+107.                         *</gmd:northBoundLatitude>*  
+
+108.                     *</gmd:EX_GeographicBoundingBox>*  
+
+109.                 *</gmd:geographicElement>*  
+
+110.             *</gmd:EX_Extent>*  
+
+111.         *</gmd:extent>*  
+
+112.         *<nas:languageCountry>*
+
+113.             *<nas:LanguageCountryCode* codeList="http://api.nsgreg.nga.mil/geo-political/GENC/3/2-1" codeListValue="USA"*/>*  
+
+114.         *</nas:languageCountry>*  
+
+115.         *<nas:resourceCategory>*
+
+116.             *<nas:ResourceCategoryCode* codeList="http://api.nsgreg.nga.mil/codelist/ResourceCategoryCode" codeListValue="other"*/>*  
+
+117.         *</nas:resourceCategory>*  
+
+118.     *</nas:MD_DataIdentification>*  
+
+119.   *</gmd:identificationInfo>*  
+
+120.   *<gmd:dataQualityInfo>*  
+
+121.     *<gmd:DQ_DataQuality>*
+
+122.         *<gmd:scope>*  
+
+123.             *<gmd:DQ_Scope>*  
+
+124.                 *<gmd:level>*  
+
+125.                     *<gmd:MD_ScopeCode* codeList="http://api.nsgreg.nga.mil/codelist/ScopeCode" codeListValue="series"*/>*  
+
+126.                 *</gmd:level>*  
+
+127.                 *<gmd:levelDescription>*  
+
+128.                     *<gmd:MD_ScopeDescription>*  
+
+129.                         *<gmd:other>*  
+
+130.                             *<nas:ScopeAmplificationCode* codeList="http://api.nsgreg.nga.mil/codelist/ScopeAmplificationCode" codeListValue="dataset"*/>*  
+
+131.                         *</gmd:other>*  
+
+132.                     *</gmd:MD_ScopeDescription>*  
+
+133.                 *</gmd:levelDescription>*  
+
+134.             *</gmd:DQ_Scope>*  
+
+135.         *</gmd:scope>*  
+
+136.         *<gmd:lineage>*  
+
+137.             *<gmd:LI_Lineage>*  
+
+138.                 *<gmd:statment>*  
+
+139.                     **<gco:CharacterString>**unknown*</gco:CharacterString>*  
+
+140.                 *</gmd:statment>*  
+
+141.             *</gmd:LI_Lineage>*  
+
+142.         *</gmd:lineage>*  
+
+143.     *</gmd:DQ_DataQuality>*  
+
+144.   *</gmd:dataQualityInfo>*  
+
+145.   *<gmd:metadataConstraints>*
+
+146.         *<nas:MD_SecurityConstraints>*  
+
+147.               *<gmd:classification>*  
+
+148.                 *<gmd:MD_ClassificationCode* codeList="http://api.nsgreg.nga.mil/codelist/ClassificationCode" codeListValue="unclassified"*/>*  
+
+149.             *</gmd:classification>*  
+
+150.             *<gmd:classificationSystem>*  
+
+151.                 **<nas:ClassificationSystem>**US CAPCO*</nas:ClassificationSystem>*  
+
+152.             *</gmd:classificationSystem>*  
+
+153.             *<nas:capcoMarking* ism:classification="U" ism:ownerProducer="USA"*/>*  
+
+154.         *</nas:MD_SecurityConstraints>*  
+
+155.   *</gmd:metadataConstraints>*  
+
+156. *</nas:MD_Metadata>*
+
+157. <!-- END EXAMPLE 1-->
+
 
