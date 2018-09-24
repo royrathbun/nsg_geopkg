@@ -2,7 +2,7 @@
 
 OGC 12-063 / ISO 19162 specifies a WKT encoding for a 3D geodetic CRS, and a way to correctly specify the axis directions for polar stereographic projections, which are required for this profile.
 
-[[_Ref393350247]]Table 7: WGS 84 Geographic 3D CRS Definition
+Table 7: WGS 84 Geographic 3D CRS Definition
 
 [cols=",",options="header",]
 |=====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -50,7 +50,7 @@ ID["EPSG",4979]]
 
 OGC ISO 19125-1:2004 and OGC 01-009 specify a WKT encoding for the WGS 84 Geographic 2D CRS which ensures interoperability with existing GeoPackage implementations.
 
-[[_Ref408829572]]Table 8: WGS 84 Geographic 2D CRS Definition
+Table 8: WGS 84 Geographic 2D CRS Definition
 
 [cols=",",options="header",]
 |=====================================================================================================================================================================================================================================================================================================================================================
@@ -82,7 +82,7 @@ UNIT["degree",0.0174532925199433]]
 |*description* |Horizontal component of 3D system. Used by the GPS satellite navigation system and for NATO military geodetic surveying.
 |=====================================================================================================================================================================================================================================================================================================================================================
 
-[[_Ref408829679]]Table 9: WGS 84 / World Mercator Projected CRS Definition
+Table 9: WGS 84 / World Mercator Projected CRS Definition
 
 [cols=",",options="header",]
 |============================================================================================
@@ -143,7 +143,7 @@ ID["EPSG","3395"]]
 |*description* |Euro-centric view of world excluding polar areas for very small scale mapping
 |============================================================================================
 
-[[_Ref455140485]]Table 10: WGS 84 / UPS North (E,N) Projected CRS Definition
+Table 10: WGS 84 / UPS North (E,N) Projected CRS Definition
 
 [cols=",",options="header",]
 |===========================================================
@@ -218,7 +218,7 @@ ID["EPSG","5041"]]
 |*description* |Military mapping by NATO north of 60° N
 |===========================================================
 
-[[_Ref408830316]]Table 11: WGS 84 / UPS South (E,N) Projected CRS Definition
+Table 11: WGS 84 / UPS South (E,N) Projected CRS Definition
 
 [cols=",",options="header",]
 |===========================================================
@@ -295,7 +295,7 @@ ID["EPSG","5042"]]
 
 Vertical CRS Definitions are provided to support the definition of compound (quasi 3D) CRS definitions below. They SHOULD NOT be used by themselves as gpkg_spatial_ref_sys table definition column values until elevation representation is addressed in a future version of the GeoPackage Encoding Standard.
 
-[[_Ref408831979]]Table 12: EGM2008 geoid height vertical CRS Definition
+Table 12: EGM2008 geoid height vertical CRS Definition
 
 [cols=",",options="header",]
 |===================================================================================================================================
@@ -327,7 +327,7 @@ ID["EPSG","3855"]]
 |*description* |Good approximation of Orthometric height above the EGM2008 model of the geoid. Replaces EGM96 geoid (CRS code 5773).
 |===================================================================================================================================
 
-{empty}[[_Ref408832051]]
+{empty}
 
 Table 13: EGM2008 geoid depth vertical CRS definition
 
@@ -363,7 +363,7 @@ ID["NSG","8056"]]
 |*description* |Good approximation of Orthometric distance below the EGM2008 model of the geoid.
 |===============================================================================================
 
-[[_Ref408832130]]Table 14: EGM96 geoid height vertical CRS definition
+Table 14: EGM96 geoid height vertical CRS definition
 
 [cols=",",options="header",]
 |=============================================================================================================================================================================================================
@@ -429,7 +429,7 @@ ID["NSG","8047"]]
 |*description* |The distance below the geopotential surface defined by the Earth Gravity Model 1996 (EGM96) that is closely associated with the mean ocean surface.
 |==================================================================================================================================================================
 
-[[_Ref408832321]]Table 16: MSL height vertical CRS definition
+Table 16: MSL height vertical CRS definition
 
 [cols=",",options="header",]
 |===================================================================================================================================================================================================================================================================================
@@ -461,7 +461,7 @@ ID["EPSG","5714"]]
 |*description* |Height related to the average height of the surface of the sea at a tide station for all stages of the tide over a 19-year period, usually determined from hourly height readings measured from a fixed predetermined reference level, usually by survey techniques.
 |===================================================================================================================================================================================================================================================================================
 
-[[_Ref408832391]]Table 17: MSL depth vertical CRS definition
+Table 17: MSL depth vertical CRS definition
 
 [cols=",",options="header",]
 |==================================================================================================================================================================================================================================================================================
@@ -493,9 +493,10 @@ ID["EPSG","5715"]]
 |*description* |Depth related to the average height of the surface of the sea at a tide station for all stages of the tide over a 19-year period, usually determined from hourly height readings measured from a fixed predetermined reference level, usually by survey techniques.
 |==================================================================================================================================================================================================================================================================================
 
+::
 *_NSG Req 10: Compound CRS definitions SHALL ONLY be used for vector features with Z geometry values._*
 
-[[_Ref408832659]]Table 18: Compound CRS Definition Template
+Table 18: Compound CRS Definition Template
 
 [cols=",",options="header",]
 |=============================================================================================================================================================
@@ -527,6 +528,7 @@ ID[“NSG”,”<Comp CRS Code>”]]
 |*description* |Geodetic position based on the World Geodetic System 1984 (WGS 84), extended by height position based on the Earth Gravity Model 2008 (EGM08).
 |=============================================================================================================================================================
 
+::
 *_NSG Req 11: Template <parameters> <Comp CRS Code> and <Compound CRS Name> in Table 18 above SHALL be replaced with parameter values from Table 19 below. Template <parameters> <Head CRS> and <Tail CRS> in Table 18 above SHALL be replaced with definitions from the definition column values in the tables referenced from Table 19. These replacements SHALL be used to define compound CRS definitions._*
 
 For example, the compound CRS definition for WGS84 Geographic 2D Height (EGM08) created by such parameter replacement is shown in the following text box.
@@ -554,7 +556,7 @@ ___________________________________________________
 |===
 ___________________________________________________
 
-[[_Ref409172408]]Table 19: Compound CRS Template Parameter Values
+Table 19: Compound CRS Template Parameter Values
 
 [cols=",,,,,",options="header",]
 |=======================================================================
