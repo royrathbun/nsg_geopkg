@@ -1,4 +1,4 @@
-== Zoom Levels
+== 8.2 Zoom Levels
 
 This clause specifies that pixel sizes vary by a factor of 2 between all adjacent zoom levels, adopting the commonly used "zoom times two" convention, and precluding the use of "zoom other intervals" conventions. It applies to any tile pyramid user data tables defined in accordance with Clause 2.2.8 that contain NSG data.
 
