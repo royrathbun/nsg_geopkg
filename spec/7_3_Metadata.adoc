@@ -45,628 +45,375 @@ Table 22: NMIS v2.2 Metadata Values - Entire GeoPackage
 |@ism:resourceElement |‘true’
 |@ism:createDate |‘2017-05-11’
 |@ism:classification a|
-‘U’, ‘R’,’C’, ‘S’, or ‘TS’
-
-Abbreviated classification for entire GeoPackage. Values derived from DES.ISM.XML
-
+‘U’, ‘R’,’C’, ‘S’, or ‘TS’  +
+Abbreviated classification for entire GeoPackage. Values derived from DES.ISM.XML  +
 |@ism:ownerProducer |‘USA’
 |@ntk:DESVersion |‘7’
 a|
-/gmd:hierarchyLevel/gmd:MD_ScopeCode
-
-@codeList
-
+/gmd:hierarchyLevel/gmd:MD_ScopeCode  +
+@codeList  +
  |‘http://api.nsgreg.nga.mil/codelist/ScopeCode’
 a|
-/gmd:hierarchyLevel/gmd:MD_ScopeCode
-
-@codeListValue
-
+/gmd:hierarchyLevel/gmd:MD_ScopeCode  +
+@codeListValue  +
  |‘series’ or ‘dataset’
 a|
-/gmd:hierarchyLevelName
-
-/nas:ScopeAmplificationCode
-
-@codeList
+/gmd:hierarchyLevelName  +
+/nas:ScopeAmplificationCode  +
+@codeList  +
 
  |‘http://api.nsgreg.nga.mil/codelist/ScopeAmplificationCode’
 a|
 /gmd:hierarchyLevelName +
-/nas:ScopeAmplificationCode
-
+/nas:ScopeAmplificationCode  +
 @codeListValue
 
  |‘collection’ (for ‘series’) or ‘notApplicable’ (for ‘dataset’)
 a|
 /gmd:contact/gmd:CI_ResponsibleParty/ +
-gmd:organisationName/
-
+gmd:organisationName/  +
 gco:CharacterString
 
  |Free text description of publishing organization for entire GeoPackage.
 a|
-/gmd:contact/gmd:CI_ResponsibleParty/
-
-gmd:role/gmd:CI_RoleCode
-
-@codeList
-
+/gmd:contact/gmd:CI_ResponsibleParty/  +
+gmd:role/gmd:CI_RoleCode  +
+@codeList  +
  |‘http://api.nsgreg.nga.mil/codelist/RoleCode’
 a|
-/gmd:contact/gmd:CI_ResponsibleParty/
-
-gmd:role/gmd:CI_RoleCode
-
-@codeListValue
-
+/gmd:contact/gmd:CI_ResponsibleParty/  +
+gmd:role/gmd:CI_RoleCode  +
+@codeListValue  +
  |‘publisher’
 |/gmd:dateStamp/gco:Date |Metadata creation date in YYYY-MM-DD format
 a|
-/gmd:metadataStandardName/
-
-nas:MetadataStandardNameCode
-
-@codeList
-
+/gmd:metadataStandardName/  +
+nas:MetadataStandardNameCode  +
+@codeList  +
  |‘http://api.nsgreg.nga.mil/codelist/MetadataStandardNameCode’
 a|
-/gmd:metadataStandardName/
-
-nas:MetadataStandardNameCode @codeListValue
-
+/gmd:metadataStandardName/  +
+nas:MetadataStandardNameCode @codeListValue  +
  |‘nsgMetadataFoundation’
 a|
-/gmd:metadataStandardVersion/
-
-nas:MetadataStandardVersion
-
+/gmd:metadataStandardVersion/  +
+nas:MetadataStandardVersion  +
  |‘2.2.0’
 a|
-/gmd:referenceSystemInfo/
-
-gmd:MD_ReferenceSystem/
-
-gmd:referenceSystemIdentifier/
-
+/gmd:referenceSystemInfo/  +
+gmd:MD_ReferenceSystem/  +
+gmd:referenceSystemIdentifier/  +
  |repeat for each row in gpkg_spatial_ref_sys for each unique srs_id reference in the gpkg_contents table
 a|
-/gmd:referenceSystemInfo/
-
-gmd:MD_ReferenceSystem/
-
-gmd:referenceSystemIdentifier/
-
-gmd:RS_Identifier/
-
-gmd:code/gco:CharacterString
-
+/gmd:referenceSystemInfo/  +
+gmd:MD_ReferenceSystem/  +
+gmd:referenceSystemIdentifier/  +
+gmd:RS_Identifier/  +
+gmd:code/gco:CharacterString  +
  |Nonnull gpkg_spatial_ref_sys.srs_name value
 a|
-/gmd:referenceSystemInfo/
-
-gmd:MD_ReferenceSystem/
-
-gmd:referenceSystemIdentifier/
-
-gmd:RS_Identifier/
-
-gmd:codeSpace/gco:CharacterString
-
+/gmd:referenceSystemInfo/  +
+gmd:MD_ReferenceSystem/  +
+gmd:referenceSystemIdentifier/  +
+gmd:RS_Identifier/  +
+gmd:codeSpace/gco:CharacterString  +
  a|
-Nonnull
-
-gpkg_spatial_ref_sys.organization value
-
+Nonnull  +
+gpkg_spatial_ref_sys.organization value  +
 a|
-gmd:identificationInfo/
-
-nas:MD_DataIdentification
-
+gmd:identificationInfo/  +
+nas:MD_DataIdentification  +
  |repeated for each row in gpkg_contents
 a|
-gmd:identificationInfo/
-
-nas:MD_DataIdentification/gmd:extent
-
-@gmd:NilReasonType
-
+gmd:identificationInfo/  +
+nas:MD_DataIdentification/gmd:extent  +
+@gmd:NilReasonType  +
  a|
-‘inapplicable’
-
-repeated for each row in gpkg_contents with null geographic values.
-
+‘inapplicable’  +
+repeated for each row in gpkg_contents with null geographic values.  +
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:citation/gmd:CI_Citation/
-
-gmd:title/gco:CharacterString
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:citation/gmd:CI_Citation/  +
+gmd:title/gco:CharacterString  +
  |gpkg_contents.table_name
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:citation/gmd:CI_Citation/
-
-gmd:date/gmd:CI_Date/
-
-gmd:dateTime/gco:DateTime
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:citation/gmd:CI_Citation/  +
+gmd:date/gmd:CI_Date/  +
+gmd:dateTime/gco:DateTime  +
  a|
-Date of gpkg creation in
-
-‘YYYY-MM-DDThh:mm:ss’ format
-
+Date of gpkg creation in  +
+‘YYYY-MM-DDThh:mm:ss’ format  +
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:citation/
-
-gmd:CI_Citation/gmd:date/
-
-gmd:CI_Date/gmd:dateType/
-
-gmd:CI_DateTypeCode @codeList
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:citation/  +
+gmd:CI_Citation/gmd:date/  +
+gmd:CI_Date/gmd:dateType/  +
+gmd:CI_DateTypeCode @codeList  +
  |‘http://api.nsgreg.nga.mil/codelist/DateTypeCode’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:citation/
-
-gmd:CI_Citation/gmd:date/
-
-gmd:CI_Date/gmd:dateType/
-
-gmd:CI_DateTypeCode @codeListValue
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:citation/  +
+gmd:CI_Citation/gmd:date/  +
+gmd:CI_Date/gmd:dateType/  +
+gmd:CI_DateTypeCode @codeListValue  +
  |‘creation’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:abstract/
-
-gco:CharacterString
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:abstract/  +
+gco:CharacterString  +
  |Free text description of tile/feature set being described in current gmd:identificationInfo node.
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:pointOfContact/
-
-gmd:CI_ResponsibleParty/
-
-gmd:organisationName/
-
-gco:CharacterString
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:pointOfContact/  +
+gmd:CI_ResponsibleParty/  +
+gmd:organisationName/  + 
+gco:CharacterString  +
  |Publishing organization of tile/feature set being described in current gmd:identificationInfo node.
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:pointOfContact/
-
-gmd:CI_ResponsibleParty/gmd:role/
-
-gmd:CI_RoleCode @codeList
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:pointOfContact/  +
+gmd:CI_ResponsibleParty/gmd:role/  +
+gmd:CI_RoleCode @codeList  +
  |‘http://api.nsgreg.nga.mil/codelist/RoleCode’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:pointOfContact/
-
-gmd:CI_ResponsibleParty/gmd:role/
-
-gmd:CI_RoleCode @codeListValue
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:pointOfContact/  +
+gmd:CI_ResponsibleParty/gmd:role/  +
+gmd:CI_RoleCode @codeListValue  +
  |‘publisher’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:descriptiveKeywords/
-
-gmd:MD_Keywords/gmd:keyword/
-
-gco:CharacterString
-
- |“GP10”
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:descriptiveKeywords/  +
+gmd:MD_Keywords/gmd:keyword/  +
+gco:CharacterString  +
+ |“GP10”  
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:resourceConstraints/
-
-nas:MD_SecurityConstraints/
-
-gmd:classification/
-
-gmd:MD_ClassificationCode @codeList
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:resourceConstraints/  +
+nas:MD_SecurityConstraints/  +
+gmd:classification/  +
+gmd:MD_ClassificationCode @codeList  +
  |‘http://api.nsgreg.nga.mil/codelist/ClassificationCode’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:resourceConstraints/
-
-nas:MD_SecurityConstraints/
-
-gmd:classification/
-
-gmd:MD_ClassificationCode
-
-@codeListValue
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:resourceConstraints/  +
+nas:MD_SecurityConstraints/  +
+gmd:classification/  +
+gmd:MD_ClassificationCode  +
+@codeListValue  +
  |Classification of tile/feature set being described in current gmd:identificationInfo node.
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:resourceConstraints/
-
-nas:MD_SecurityConstraints/
-
-gmd:classificationSystem/
-
-nas:ClassificationSystem
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:resourceConstraints/  +
+nas:MD_SecurityConstraints/  +
+gmd:classificationSystem/  +
+nas:ClassificationSystem  +
  |‘US CAPCO’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:resourceConstraints/
-
-nas:MD_SecurityConstraints/
-
-nas:capcoMarking @ism:classification
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:resourceConstraints/  +
+nas:MD_SecurityConstraints/  +
+nas:capcoMarking @ism:classification  +
  a|
-‘U’, ‘R’,’C’, ‘S’, or ‘TS’
-
-Abbreviated classification of tile/feature set being described in current gmd:identificationInfo node. Values derived from DES.ISM.XML
-
+‘U’, ‘R’,’C’, ‘S’, or ‘TS’  +
+Abbreviated classification of tile/feature set being described in current gmd:identificationInfo node. Values derived from DES.ISM.XML  +
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:resourceConstraints/
-
-nas:MD_SecurityConstraints/
-
-nas:capcoMarking @ism:ownerProducer
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:resourceConstraints/  +
+nas:MD_SecurityConstraints/  +
+nas:capcoMarking @ism:ownerProducer  +
  |‘USA’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:language/gmd:LanguageCode
-
-@codeList
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:language/gmd:LanguageCode  +
+@codeList  +
  |‘http://api.nsgreg.nga.mil/codelist/ISO639-2’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-md:language/
-
-gmd:LanguageCode @codeListValue
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+md:language/  +
+gmd:LanguageCode @codeListValue  +
  |‘eng’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:characterSet/
-
-gmd:MD_CharacterSetCode @codeList
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:characterSet/  +
+gmd:MD_CharacterSetCode @codeList  +
  |‘http://api.nsgreg.nga.mil/codelist/CharacterSetCode’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:characterSet/
-
-gmd:MD_CharacterSetCode
-
-@codeListValue
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:characterSet/  +
+gmd:MD_CharacterSetCode  +
+@codeListValue  +
  |‘utf8’
 a|
-gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:extent@gml:NilReasonType
-
+gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:extent@gml:NilReasonType  +
  a|
-‘inapplicable’
-
-repeated for each row in gpkg_contents with null geographic values.
-
+‘inapplicable’  +
+repeated for each row in gpkg_contents with null geographic values.  +
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:extent/
-
-gmd:EX_Extent/
-
-gmd:geographicElement/
-
-gmd:EX_GeographicBoundingBox/
-
-gmd:westBoundLongitude/
-
-gco:Decimal
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:extent/  +
+gmd:EX_Extent/  +
+gmd:geographicElement/  +
+gmd:EX_GeographicBoundingBox/  +
+gmd:westBoundLongitude/  +
+gco:Decimal  +
  a|
-Nonnull gpkg_contents.min_x
-
-value as or converted to EPSG::4326 longitude
-
+Nonnull gpkg_contents.min_x  +
+value as or converted to EPSG::4326 longitude  +
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:extent/gmd:EX_Extent/
-
-gmd:geographicElement/
-
-gmd:EX_GeographicBoundingBox/
-
-gmd:eastBoundLongitude/
-
-gco:Decimal
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:extent/gmd:EX_Extent/  +
+gmd:geographicElement/  +
+gmd:EX_GeographicBoundingBox/  +
+gmd:eastBoundLongitude/  +
+gco:Decimal  +
  a|
-Nonnull gpkg_contents.max_x
-
-value as or converted to EPSG::4326 longitude
-
+Nonnull gpkg_contents.max_x  +
+value as or converted to EPSG::4326 longitude  +
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:extent/gmd:EX_Extent/
-
-gmd:geographicElement/
-
-gmd:EX_GeographicBoundingBox/
-
-gmd:southBoundLatitude/
-
-gco:Decimal
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:extent/gmd:EX_Extent/  +
+gmd:geographicElement/  +
+gmd:EX_GeographicBoundingBox/  +
+gmd:southBoundLatitude/  +
+gco:Decimal  +
  a|
-Nonnull gpkg_contents.min_y
-
-value as or converted to EPSG::4326 latitude
-
+Nonnull gpkg_contents.min_y  +
+value as or converted to EPSG::4326 latitude  +
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-gmd:extent/gmd:EX_Extent/
-
-gmd:geographicElement/
-
-gmd:EX_GeographicBoundingBox/
-
-gmd:northBoundLatitude/
-
-gco:Decimal
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+gmd:extent/gmd:EX_Extent/  +
+gmd:geographicElement/  +
+gmd:EX_GeographicBoundingBox/  +
+gmd:northBoundLatitude/  +
+gco:Decimal  +
  a|
-Nonnull gpkg_contents.max_y
-
-value as or converted to EPSG::4326 latitude
-
+Nonnull gpkg_contents.max_y  +
+value as or converted to EPSG::4326 latitude  +
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-nas:languageCountry/
-
-nas:LanguageCountryCode
-
-@codeList
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+nas:languageCountry/  +
+nas:LanguageCountryCode  +
+@codeList  +
  |‘http://api.nsgreg.nga.mil/geo-political/GENC/3/2-1’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-nas:languageCountry/
-
-nas:LanguageCountryCode
-
-@codeListValue
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+nas:languageCountry/  +
+nas:LanguageCountryCode  +
+@codeListValue  +
  |‘USA’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-nas:resourceCategory/
-
-nas:ResourceCategoryCode
-
-@codeList
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+nas:resourceCategory/  +
+nas:ResourceCategoryCode  +
+@codeList  +
  |‘http://api.nsgreg.nga.mil/codelist/ResourceCategoryCode’
 a|
-/gmd:identificationInfo/
-
-nas:MD_DataIdentification/
-
-nas:resourceCategory/
-
-nas:ResourceCategoryCode
-
-@codeListValue
-
+/gmd:identificationInfo/  +
+nas:MD_DataIdentification/  +
+nas:resourceCategory/  +
+nas:ResourceCategoryCode  +
+@codeListValue  +
  |‘other’
 a|
-/gmd:dataQualityInfo/
-
-gmd:DQ_DataQuality/
-
-gmd:scope/gmd:DQ_Scope/
-
-gmd:level/gmd:MD_ScopeCode
-
-@codeList
-
+/gmd:dataQualityInfo/  +
+gmd:DQ_DataQuality/  +
+gmd:scope/gmd:DQ_Scope/  +
+gmd:level/gmd:MD_ScopeCode  +
+@codeList  +
  |‘http://api.nsgreg.nga.mil/codelist/ScopeCode’
 a|
-/gmd:dataQualityInfo/
-
-gmd:DQ_DataQuality/
-
-gmd:scope/gmd:DQ_Scope/
-
-gmd:level/gmd:MD_ScopeCode @codeListValue
-
+/gmd:dataQualityInfo/  +
+gmd:DQ_DataQuality/  + 
+gmd:scope/gmd:DQ_Scope/  +
+gmd:level/gmd:MD_ScopeCode @codeListValue  +
  |‘series’ or ‘dataset’
 a|
-/gmd:dataQualityInfo/
-
-gmd:DQ_DataQuality/
-
-gmd:scope/gmd:DQ_Scope/
-
-gmd:levelDescription/
-
-gmd:MD_ScopeDescription/gmd:other/
-
-nas:ScopeAmplificationCode @codeList
-
+/gmd:dataQualityInfo/  +
+gmd:DQ_DataQuality/  +
+gmd:scope/gmd:DQ_Scope/  +
+gmd:levelDescription/  +
+gmd:MD_ScopeDescription/gmd:other/  +
+nas:ScopeAmplificationCode @codeList  + 
  |‘http://api.nsgreg.nga.mil/codelist/ScopeAmplificationCode’
 a|
-/gmd:dataQualityInfo/
-
-gmd:DQ_DataQuality/
-
-gmd:scope/
-
-gmd:DQ_Scope/
-
-gmd:levelDescription/
-
-gmd:MD_ScopeDescription/gmd:other/
-
-nas:ScopeAmplificationCode @codeListValue
-
+/gmd:dataQualityInfo/  +
+gmd:DQ_DataQuality/  +
+gmd:scope/  +
+gmd:DQ_Scope/  +
+gmd:levelDescription/  +
+gmd:MD_ScopeDescription/gmd:other/  +
+nas:ScopeAmplificationCode @codeListValue  +
  |‘collection’ (for ‘series’) or ‘notApplicable’ (for ‘dataset’)
 a|
-/gmd:dataQualityInfo/
-
-gmd:DQ_DataQuality/
-
-gmd:lineage/gmd:LI_Lineage/
-
-gmd:statment/gco:CharacterString
-
+/gmd:dataQualityInfo/  +
+gmd:DQ_DataQuality/  +
+gmd:lineage/gmd:LI_Lineage/  +
+gmd:statment/gco:CharacterString  +
  |Free text description of lineage for entire GeoPackage
 a|
-/gmd:metadataConstraints/
-
-nas:MD_SecurityConstraints/
-
-gmd:classification/gmd:MD_ClassificationCode
-
+/gmd:metadataConstraints/  +
+nas:MD_SecurityConstraints/  +
+gmd:classification/gmd:MD_ClassificationCode  +
  |
 a|
-/gmd:metadataConstraints/
-
-nas:MD_SecurityConstraints/
-
-gmd:classification/
-
-gmd:MD_ClassificationCode
-
-@codeList
-
+/gmd:metadataConstraints/  +
+nas:MD_SecurityConstraints/  +
+gmd:classification/  +
+gmd:MD_ClassificationCode  +
+@codeList  +
  |‘http://api.nsgreg.nga.mil/codelist/ClassificationCode’
 a|
-/gmd:metadataConstraints/
-
-nas:MD_SecurityConstraints/
-
-gmd:classification/
-
-gmd:MD_ClassificationCode @codeListValue
-
+/gmd:metadataConstraints/  +
+nas:MD_SecurityConstraints/  +
+gmd:classification/  +
+gmd:MD_ClassificationCode @codeListValue  +
  |Classification of entire GeoPackage
 a|
-/gmd:metadataConstraints/
-
-nas:MD_SecurityConstraints/
-
-gmd:classificationSystem/
-
-nas:ClassificationSystem
-
+/gmd:metadataConstraints/  +
+nas:MD_SecurityConstraints/  +
+gmd:classificationSystem/  +
+nas:ClassificationSystem  +
  |‘US CAPCO’
 a|
-/gmd:metadataConstraints/
-
-nas:MD_SecurityConstraints/
-
-nas:capcoMarking @ism:classification
-
+/gmd:metadataConstraints/  +
+nas:MD_SecurityConstraints/  +
+nas:capcoMarking @ism:classification  +
  a|
-‘U’, ‘R’,’C’, ‘S’, or ‘TS’
-
-Abbreviated classification for entire GeoPackage. Values derived from DES.ISM.XML
-
+‘U’, ‘R’,’C’, ‘S’, or ‘TS’  +
+Abbreviated classification for entire GeoPackage. Values derived from DES.ISM.XML  +
 a|
-/gmd:metadataConstraints/
-
-nas:MD_SecurityConstraints/
-
-nas:capcoMarking @ism:ownerProducer
-
+/gmd:metadataConstraints/  +
+nas:MD_SecurityConstraints/  +
+nas:capcoMarking @ism:ownerProducer  +
  |‘USA’
 |=====================================================================================================================================
 
