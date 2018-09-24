@@ -1,0 +1,77 @@
+= Annex B Metadata Reference Example
+
+
+
+Table 28 below shows six example rows in the gpkg_metadata table for a GeoPackage.
+
+
+
+Table 28: gpkg_metadata table sample contents
+
+
+
+[cols=",,,,",options="header",]
+
+|============================================================================================================================
+
+|*id* |*md_scope* |*md_standard_uri* |*mime_type* |*metadata*
+
+|1 |series |http://metadata.ces.mil/dse/ns/GSIP/nmis/2.2.0/doc |text/xml |Complete NMIS v2.2 for entire GeoPackage
+
+|2 |dataset |http://metadata.ces.mil/dse/ns/GSIP/nmis/2.2.0/doc |text/xml |Partial NMIS v2.2 for feature data product
+
+|3 |dataset |http://metadata.ces.mil/dse/ns/GSIP/nmis/2.2.0/doc |text/xml |Partial NMIS v2.2 for tiles data product
+
+|4 |feature |http://metadata.ces.mil/dse/ns/GSIP/nmis/2.2.0/doc |text/xml |Partial NMIS v2.2 for one road feature
+
+|5 |attribute |http://metadata.ces.mil/dse/ns/GSIP/nmis/2.2.0/doc |text/xml |Partial NMIS v2.2 for one road feature attribute
+
+|6 |tile |http://metadata.ces.mil/dse/ns/GSIP/nmis/2.2.0/doc |text/xml |Partial NMIS v2.2 for one tile image
+
+|============================================================================================================================
+
+
+
+Table 29 below shows six example rows in the gpkg_metadata_reference table that link the metadata rows in Table 28 to the GeoPackage contents that the metadata in those rows describes.
+
+
+
+Table 29: gpkg_metadata_reference table sample contents
+
+
+
+[cols=",,,,,,",options="header",]
+
+|=========================================================================================================
+
+|*reference_scope* |*table_name* |*column_name* |*row_id_value* |*timestamp* |*md_file_id* |*md_parent_id*
+
+|geopackage |NULL |NULL |NULL |2014-09-04T15:33:47.123Z |1 |NULL
+
+|table |roads |NULL |NULL |2014-09-04T15:34:06.234Z |2 |1
+
+|table |buckeye |NULL |NULL |2014-09-04T15:35:07.345Z |3 |1
+
+|row |roads |NULL |123 |2014-09-04T15:36:11:456Z |4 |2
+
+|row/col |roads |num_lanes |234 |2014-09-04T15:36:25:567Z |5 |2
+
+|row/col |buckeye |tile_data |987 |2014-09-04T15:37:49:678Z |6 |3
+
+|=========================================================================================================
+
+
+
+Figure 1 below provides a diagram of the links between the rows in these tables and the GeoPackage contents.
+
+
+
+Figure 1: GeoPackage Metadata References
+
+
+
+image:extracted-media/media/image2.png[GeoPackage Metadata References.png,width=363,height=320]
+
+
+
+Figures 2 and 3 provide example XML instance documents for complete NMIS v2.2
