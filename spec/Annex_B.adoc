@@ -76,6 +76,8 @@ image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/image2.png[GeoP
 
 Figures 2 and 3 provide example XML instance documents for complete NMIS v2.2  
 
+*_Figure 2. NMIS v2.2 Example 1 Instance XML, Single Tileset GeoPackage_*
+
 1.  <!-- BEGIN EXAMPLE 1-->
 
 2.  *<?xml* version="1.0" encoding="utf-8"*?>*  
@@ -392,7 +394,7 @@ Figures 2 and 3 provide example XML instance documents for complete NMIS v2.2
 
 
 
-Figure 3. NMIS v2.2 Example 2 Instance XML, Tile and Feature Set GeoPackage
+*_Figure 3. NMIS v2.2 Example 2 Instance XML, Tile and Feature Set GeoPackage_*
 
 1.  <!—BEGIN EXAMPLE 2-->
 
