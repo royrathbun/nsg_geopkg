@@ -7,6 +7,7 @@ GeoPackage Infrastructure and Applications MAY
 * Maintain data validity after every SQL command that changes GeoPackage data when this is a critical requirement (e.g for data extent or metadata). Doing so (e.g. with SQL triggers) can cause significant performance degradation.
 * Maintain data validity after a sequence of SQL commands, or after some application-specific unit of work, or upon application startup and/or termination, when this is not a critical requirement. Doing so (e.g. with a background process or a “batch” job upon application termination) can provide significant performance enhancement.
 
+::
 *_NSG Req 19: Data validity SHALL be assessed against data value constraints specified in Table 26 below using a test suite. Data validity MAY be enforced by SQL triggers._*
 
 Table 26: Data Validity Constraints
