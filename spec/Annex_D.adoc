@@ -8,8 +8,8 @@ The map projection is Universal Polar Stereographic (UPS) or EPSG::5041, but wit
 
 
 [latexmath]:
-[\[-14\ 440\ 759.3502\  <= x 18\ 440\ 759.350252  +
--14\ 440\ 759.3502\  <= y 18\ 440\ 759.350252\]]
+[\[-14\ 440\ 759.3502\  \leq x 18\ 440\ 759.350252  +
+-14\ 440\ 759.3502\  \leq y 18\ 440\ 759.350252\]]
 
 In the UPS System, the north Pole is assigned the coordinates x = 2 000 000 y = 2 000 000. The above projection limits can be expressed another way to show the symmetry about the Pole: 
 
