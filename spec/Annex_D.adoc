@@ -1,0 +1,56 @@
+Annex D Implementation Guide for UPS Tiles
+
+*UPS North (Full Tiling)*
+
+This section and the next specify the tiliing scheme for the zoom-able tiled raster graphics, when the map projection is the polar stereographic projection. This was specified in *SIG.0014_1.0_PROJRAS* but is amended here.
+
+The map projection is Universal Polar Stereographic (UPS) or EPSG::5041, but with these limits for the UPS coordinates (x,y):
+
+[latexmath]
+-14 440 759.3502  <= x 18 440 759.350252  +
+-14 440 759.3502  <= y 18 440 759.350252
+
+In the UPS System, the north Pole is assigned the coordinates x = 2 000 000 y = 2 000 000. The above projection limits can be expressed another way to show the symmetry about the Pole: 
+
+[latexmath]  
+-16 440 759.3502 < =x - 2 000 000 < = 16 440 759.350252  +
+-16 440 759.3502 < =y - 2 000 000 < = 16 440 759.350252  
+
+
+The formulas for UPS grid coordinates, given the latitude and longitude, are available in many places, including the NGA document, *SIG.0012_2.0.0_UTMUPS.* In this application of UPS coordinates, negative values are allowed.
+
+The above limits are calculations based on the stipulation that the level 0 tile (a square) will be tangent on all four sides to circle at latitude latexmath:[$15^{0}$]S. This is shown in Fig. 1. More detail is given in Fig. 2.image:extracted-media/media/image9.png[image,width=619,height=256]
+
+The tiling scheme is given as follows:
+
+* Tiles are squares with 256 pixels on a side
+* Successive zoom-levels are built by dividing each tile in half, both horizontally and vertically to get twice as many tiles across and twice as many tiles down
+* At zoom level 0 there is only one tile. It spans the limits of the projection given above.
+
+The tiles are organized into rows and columns. At every zoom level, row 0 is at the top and column 0 is at the left. Fig. 3 shows the arrangment of tiles for zoom level 1. Fig. 4 shows the same for zoom level 2.
+
+image:extracted-media/media/image10.png[image,width=620,height=677]
+
+image:extracted-media/media/image11.png[image,width=620,height=862]
+
+For each zoom level latexmath:[$n$], there are latexmath:[$2^{n}$] tiles across and latexmath:[$2^{n}$] tiles down. Each tile is 256 pixels across by 256 pixels down. Therefore, the total number of pixels at zoom-level latexmath:[$n$] that lie on the latexmath:[$x$]-axis between latexmath:[$x = - 14\ 440\ 759.350252$] and latexmath:[$x = 18\ 440\ 759.350252$] (an interval of length of latexmath:[$32\ 881\ 518.700504$] is latexmath:[$256*2^{n} = 2^{n + 8}$]. The ratio of meters on the latexmath:[$x$]-axis to pixels on the x-axis is therefore:
+
+latexmath:[$\frac{32\ 881\ \ 581.700504}{2^{n + 8}}$]meters/pixels
+
+The meters/pixel ratio for the latexmath:[$y$]-axis is the same. One pixel on the latexmath:[$x$]- or latexmath:[$y$]-axis is the above number of meters. One pixel on the small-device screen is assumed to be 0.28mm. This is a conventional number, and treated as if its accuracy was 0.2800000000000000mm. These numbers and formulas lead to the quantity “Scale Demoninator” used in the XML examples in the WMTS standard, as follows: image:extracted-media/media/image12.png[image,width=619,height=288]
+
+Example 1. At zoom level latexmath:[$n = 5$], the scale denominator is 14335204.51158959. Multiplying this by the device’s nominal pixel size of 0.28mm gives 4013.857263245084 meters/pixel.
+
+The above discussion of scale was confined entirely to the pixel size _on the device,_ to the pixel’s extent on the _UPS projection plane,_ and to the ratio between these. No mention of latitude was necessary. To relate the pixel size to a length _on the Earth_ (i.e the WGS 84 ellipsoid model of the Earth), where latitude is a dependency, see Table (TBD) or use the fact that Table 4 of *NGA.SIG.0014_1.0_PROJRAS* is relatively correct between latitudes. Here are some examples:
+
+image:extracted-media/media/image12.png[image,width=608,height=83]
+
+Example 3. At zoom level latexmath:[$n = 5$], the ratio, meters(Earth)/pixel, for latitude 60°N is 3767.81. This number can be computed as the value at the Pole (see Example 2) times the ratio latexmath:[$\frac{Tsble4at60}{Table4at90} = \frac{4214.27}{4516.57} = 0.933069.$]
+
+*UPS South (Full Tiling) *
+
+The situation for UPS South is similar to the foregoing. The EPSG code is EPSG:: 5042. The x- and y-limits of projections are the same. It is symmetric in every way to UPS North, except, of course, the geography is different. Fig. 5 shows the portions of the world covered:
+
+image:extracted-media/media/image13.png[image,width=596,height=474]
+
+Fig 5. The Outside square is the single tile for zoom level 0. Its center is the south Pole with UPS coordinates (x,y) = (2 000 000, 2 000 000). Zoom level 1 is obtained by dividing it into 4 squares that abut each other along the 90°W, 0°E, 90°E, and 180°E meridians. The labels are shown every one million meters. Shown in blue are meridians and parallels at 15° intervals from the Prime Meridian and Equator, respectively. Small pieces of the 30°N parallel are shown.
