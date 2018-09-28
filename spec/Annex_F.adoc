@@ -62,7 +62,7 @@ Rtree spatial indexes on geometry columns SHALL be created using the SQLite Virt
 ::
 where <t> and <c> are replaced with the names of the feature table and geometry column being indexed. The rtree function id parameter becomes the virtual table 64-bit signed integer primary key id column, and the min/max x/y parameters are min- and max-value pairs (stored as 32-bit floating point numbers) for each dimension that become the virtual table data columns that are populated to create the spatial rtree index.
 
-*F.8.1.2  Load Spatial Index Values
+*F.8.1.2  Load Spatial Index Values*
 
 ::
 The indexes provided by the SQLite Virtual Table RTree extension are not automatic indices. This means the index data structure needs to be manually populated, updated and queried.
@@ -82,6 +82,10 @@ where <t> and <c> are replaced with the names of the feature table and geometry 
 ::
 For each spatial index in a GeoPackage, corresponding insert, update and delete triggers that update the spatial index SHALL be present on the indexed geometry column. These spatial index triggers SHALL be defined as follows:
 
+image:/media/Annex_F_8_1_3_1.png[image]
+image:/media/Annex_F_8_1_3_2.png[image]
+image:/media/Annex_F_8_1_3_3.png[image]
+image:/media/Annex_F_8_1_3_4.png[image]
 
 where <t> and <c> are replaced with the names of the feature table and geometry column being indexed and <i> is replaced with the name of the feature table integer primary key column.
 
