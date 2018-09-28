@@ -73,4 +73,4 @@ The situation for UPS South is similar to the foregoing. The EPSG code is EPSG::
 
 image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Annex_D_Fig_5.png[image]
 
-Fig 5. The Outside square is the single tile for zoom level 0. Its center is the south Pole with UPS coordinates (x,y) = (2 000 000, 2 000 000). Zoom level 1 is obtained by dividing it into 4 squares that abut each other along the 90°W, 0°E, 90°E, and 180°E meridians. The labels are shown every one million meters. Shown in blue are meridians and parallels at 15° intervals from the Prime Meridian and Equator, respectively. Small pieces of the 30°N parallel are shown.
+*Fig 5. The Outside square is the single tile for zoom level 0. Its center is the south Pole with UPS coordinates (x,y) = (2 000 000, 2 000 000). Zoom level 1 is obtained by dividing it into 4 squares that abut each other along the 90°W, 0°E, 90°E, and 180°E meridians. The labels are shown every one million meters. Shown in blue are meridians and parallels at 15° intervals from the Prime Meridian and Equator, respectively. Small pieces of the 30°N parallel are shown.*
