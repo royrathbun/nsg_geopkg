@@ -36,7 +36,7 @@ The tiles are organized into rows and columns. At every zoom level, row 0 is at 
 image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Annex_D_Fig_2.png[image]
 
 ::
-*_Fig. 2. The ouside square is the single tile for zoom level 0.  Its center is the North Pole with UPS coordinates (x,y) = (2 000 000, 2 000 000).  Zoom leve 1 is obtained by dividing it into 4 squares that abut each other along the 90^o^W, 0^o^E, 90^o^E, and 180^o^E meridians.  The labels on teh x- and y- axes are millions of meters, and UPS grid lines are shown every one million meters.  Shown in blue are meridians and parallels at 15^o^ intervals from the Prime Meridian and Equator, respectively.  Small pieces of the 30^o^ parallel are shown._*
+*_Fig. 2. The ouside square is the single tile for zoom level 0.  Its center is the North Pole with UPS coordinates (x,y) = (2 000 000, 2 000 000).  Zoom level 1 is obtained by dividing it into 4 squares that abut each other along the 90^o^W, 0^o^E, 90^o^E, and 180^o^E meridians.  The labels on the x- and y- axes are millions of meters, and UPS grid lines are shown every one million meters.  Shown in blue are meridians and parallels at 15^o^ intervals from the Prime Meridian and Equator, respectively.  Small pieces of the 30^o^ parallel are shown._*
 
 image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Annex_D_Fig_3.png[image]  
 
@@ -50,7 +50,9 @@ For each zoom level _n_, there are 2^_n_^ tiles across and 2^_n_^ tiles down. Ea
 
 image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Ratio_X_Y_Pixels.png[image]
 
-The meters/pixel ratio for the _y_-axis is the same. One pixel on the _x_- or _y_-axis is the above number of meters. One pixel on the small-device screen is assumed to be 0.28mm. This is a conventional number, and treated as if its accuracy was 0.2800000000000000mm. These numbers and formulas lead to the quantity “Scale Demoninator” used in the XML examples in the WMTS standard, as follows: image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Scale_Denominator.png[image,width=619,height=288]
+The meters/pixel ratio for the _y_-axis is the same. One pixel on the _x_- or _y_-axis is the above number of meters. One pixel on the small-device screen is assumed to be 0.28mm. This is a conventional number, and treated as if its accuracy was 0.2800000000000000mm. These numbers and formulas lead to the quantity “Scale Demoninator” used in the XML examples in the WMTS standard, as follows:  
+
+image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Scale_Denominator.png[image,width=619,height=288]
 
 ::
 *_Example 1. At zoom level _n_ = 5, the scale denominator is 14335204.51158959. Multiplying this by the device’s nominal pixel size of 0.28mm gives 4013.857263245084 meters/pixel._*
