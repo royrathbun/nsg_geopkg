@@ -12,8 +12,8 @@ At zoom level 0, the pixel size in degrees is 180/256 = 0.7031250.
 
 The zoom level scale set and matrix width and height for the WGS 84 Geodetic raster tile pyramid are defined below in Table 34. These tiles are fully compatible with the World CRS84 TileMatrixSet definition as specified in OGC 13-082r2 “WMTS Simple Profile”. Any discrepancies in the scale denominator and pixels size values shown below are simply an artifact of rounding, and do not reflect any difference in how the tiles are created or rendered.
 
-.Table 34: WGS 84 Geodetic zoom level scale set and matrix dimensions
-[cols=",,,,",options="header",]
+Table 34: WGS 84 Geodetic zoom level scale set and matrix dimensions
+[cols="5",options="header",]
 |==============================================================================================
 |*Zoom Level* |*Scale Denominator* |*Pixel Size (degrees)* |_*matrix_width*_ |_*matrix_height*_
 |0 |279541132.01435900 |0.7031250 |2 |1
@@ -53,7 +53,7 @@ image:/media/image16.png[Slide7_fix,width=619,height=347]
 
 The bounding box in the _*gpkg_tile_matrix_set*_ table should contain the projection bounds for the WGS84 Geodetic raster tile pyramid (-180, -90) to (180, 90) This bounding box is used to determine the geolocation of each tile which use the global tile referencing scheme shown above. All tiles must be ‘snapped’ to the WGS84 Geodetic grid. If source data does not completely fill a tile, pixels without data within the tile must be completely filled with a default value. For JPEG tiles this default value is usually black, while PNG tiles may use transparency. Table 35 below demonstrates how the _matrix_width_ and _matrix_height_ columns values in the _gpkg_tile_matrix_ table should be encoded. These values are fixed and are based on the maximum number of tiles that could exist at a given zoom level.
 
-.Table 35: WGS 84 Geodetic gpkg_tile_matrix table
+Table 35: WGS 84 Geodetic gpkg_tile_matrix table
 [cols=",,,,,,,",options="header",]
 |==============================================================================================
 |*_table_name_* |*_zoom_level_* |*_matirx_width_* |*_matrix_height_* |*_tile_width_* |*_tile_height_* | *_pixel_x_size_* | *_pixel_y_size_*
@@ -67,7 +67,7 @@ The image in Figure 7 and sample ‘tiles’ in Table 36 demonstrate how tiles s
 .Figure 7: WGS 84 Geodetic Zoom Level 2 Example
 image:/media/image18.png[Slide8_fix,width=619,height=347]
 
-.Table 36: WGS 84 Geodetic tiles table
+Table 36: WGS 84 Geodetic tiles table
 [cols=",,,,",options="header",]
 |==============================================================================================
 |*_id_* |*_zoom_level_* |*_tile_column_* |*_tile_row_* |*_tile_data_*
