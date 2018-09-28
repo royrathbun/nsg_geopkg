@@ -82,14 +82,14 @@ where <t> and <c> are replaced with the names of the feature table and geometry 
 ::
 For each spatial index in a GeoPackage, corresponding insert, update and delete triggers that update the spatial index SHALL be present on the indexed geometry column. These spatial index triggers SHALL be defined as follows:
 
-image:/media/Annex_F_8_1_3_1.png[image]
-image:/media/Annex_F_8_1_3_2.png[image]
-image:/media/Annex_F_8_1_3_3.png[image]
-image:/media/Annex_F_8_1_3_4.png[image]
+image:/media/Annex_F_8_1_3_1.png[image,600,300]
+image:/media/Annex_F_8_1_3_2.png[image,600,900]
+image:/media/Annex_F_8_1_3_3.png[image,700,350]
+image:/media/Annex_F_8_1_3_4.png[image,600,200]
 
 where <t> and <c> are replaced with the names of the feature table and geometry column being indexed and <i> is replaced with the name of the feature table integer primary key column.
 
-*.F.8.1.4  GeoPackage SQLite Configuration
+*.F.8.1.4  GeoPackage SQLite Configuration*
 
 [cols=",,,",options="header",]
 |========================================================================
@@ -98,102 +98,16 @@ where <t> and <c> are replaced with the names of the feature table and geometry 
 |compile | SQLITE_RTREE_INT_ONLY | Not  |  Rtrees with floating point values are used for GeoPackage Spatial Indexes
 |========================================================================
 
-GeoPackage SQLite Extension
+*F.8.1.5  GeoPackage SQLite Extension*
 
 [cols=",,",options="header",]
 |====================================================================================
-a|
-______________
-*SQL Function*
-______________
-
- a|
-_____________
-*Description*
-_____________
-
- a|
-_____
-*Use*
-_____
-
-a|
-___________________________________
-ST_IsEmpty(geom. Geometry): INTEGER
-___________________________________
-
- a|
-_____________________________________________________________________________________
-Returns 1 if geometry value is empty, 0 if not empty, NULL if geometry value is NULL.
-_____________________________________________________________________________________
-
- a|
-_____________________________________________________
-Test if a geometry value corresponds to the empty set
-_____________________________________________________
-
-a|
-______________________________
-ST_MinX(geom. Geometry) : REAL
-______________________________
-
- a|
-__________________________________________________________________
-Returns the minimum X value of the bounding Envelope of a Geometry
-__________________________________________________________________
-
- a|
-_________________________________________________________________
-Update the spatial index on a geometry column in a feature table.
-_________________________________________________________________
-
-a|
-______________________________
-ST_MaxX(geom. Geometry) : REAL
-______________________________
-
- a|
-__________________________________________________________________
-Returns the maximum X value of the bounding Envelope of a Geometry
-__________________________________________________________________
-
- a|
-_________________________________________________________________
-Update the spatial index on a geometry column in a feature table.
-_________________________________________________________________
-
-a|
-______________________________
-ST_MinY(geom. Geometry) : REAL
-______________________________
-
- a|
-__________________________________________________________________
-Returns the minimum Y value of the bounding Envelope of a Geometry
-__________________________________________________________________
-
- a|
-_________________________________________________________________
-Update the spatial index on a geometry column in a feature table.
-_________________________________________________________________
-
-a|
-______________________________
-ST_MaxY(geom. Geometry) : REAL
-______________________________
-
- a|
-__________________________________________________________________
-Returns the maximum Y value of the bounding Envelope of a Geometry
-__________________________________________________________________
-
- a|
-_________________________________________________________________
-Update the spatial index on a geometry column in a feature table.
-_________________________________________________________________
-
+|*SQL Function* | *Description* | *Use* 
+| ST_IsEmpty(geom. Geometry): INTEGER | Returns 1 if geometry value is empty, 0 if not empty, NULL if geometry value is NULL. | Test if a geometry value corresponds to the empty set
+|ST_MinX(geom. Geometry) : REAL | Returns the minimum X value of the bounding Envelope of a Geometry |Update the spatial index on a geometry column in a feature table.
+|ST_MaxX(geom. Geometry) : REAL | Returns the maximum X value of the bounding Envelope of a Geometry |Update the spatial index on a geometry column in a feature table.
+|ST_MinY(geom. Geometry) : REAL| Returns the minimum Y value of the bounding Envelope of a Geometry | Update the spatial index on a geometry column in a feature table.
+|ST_MaxY(geom. Geometry) : REAL | Returns the maximum Y value of the bounding Envelope of a Geometry | Update the spatial index on a geometry column in a feature table.
 |====================================================================================
 
-___________________________________________________________________________________________________________________________________________________________________________________________
 The SQL functions on geometries in this SQLite Extension SHALL operate correctly on extended geometry types specified by Annex J and/or Annex K when those extensions are also implemented.
-___________________________________________________________________________________________________________________________________________________________________________________________
