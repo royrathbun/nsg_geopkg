@@ -85,11 +85,11 @@ For each spatial index in a GeoPackage, corresponding insert, update and delete 
 image:/media/Annex_F_8_1_3_1.png[image,600,300]
 image:/media/Annex_F_8_1_3_2.png[image,600,900]
 image:/media/Annex_F_8_1_3_3.png[image,700,350]
-image:/media/Annex_F_8_1_3_4.png[image,600,200]
+image:/media/Annex_F_8_1_3_4.png[image,650,200]
 
 where <t> and <c> are replaced with the names of the feature table and geometry column being indexed and <i> is replaced with the name of the feature table integer primary key column.
 
-*.F.8.1.4  GeoPackage SQLite Configuration*
+*F.8.1.4  GeoPackage SQLite Configuration*
 
 [cols=",,,",options="header",]
 |========================================================================
