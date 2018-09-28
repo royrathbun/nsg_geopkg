@@ -55,14 +55,14 @@ The meters/pixel ratio for the _y_-axis is the same. One pixel on the _x_- or _y
 image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Scale_Denominator.png[image,width=619,height=288]
 
 ::
-*_Example 1. At zoom level _n_ = 5, the scale denominator is 14335204.51158959. Multiplying this by the device’s nominal pixel size of 0.28mm gives 4013.857263245084 meters/pixel._*
+*Example 1. At zoom level _n_ = 5, the scale denominator is 14335204.51158959. Multiplying this by the device’s nominal pixel size of 0.28mm gives 4013.857263245084 meters/pixel.*
 
 The above discussion of scale was confined entirely to the pixel size _on the device,_ to the pixel’s extent on the _UPS projection plane,_ and to the ratio between these. No mention of latitude was necessary. To relate the pixel size to a length _on the Earth_ (i.e the WGS 84 ellipsoid model of the Earth), where latitude is a dependency, see Table (TBD) or use the fact that Table 4 of *NGA.SIG.0014_1.0_PROJRAS* is relatively correct between latitudes. Here are some examples:
 
 image:extracted-media/media/image12.png[image,width=608,height=83]
 
 ::
-*_Example 3. At zoom level _n_ = 5, the ratio, meters(Earth)/pixel, for latitude 60°N is 3767.81. This number can be computed as the value at the Pole (see Example 2) times the ratio_* image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Example_3_Ratio.png[image,width=200,height=50]
+*Example 3. At zoom level _n_ = 5, the ratio, meters(Earth)/pixel, for latitude 60°N is 3767.81. This number can be computed as the value at the Pole (see Example 2) times the ratio* image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Example_3_Ratio.png[image,width=150,height=35]
 
 *UPS South (Full Tiling) *
 
