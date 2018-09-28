@@ -48,7 +48,7 @@ image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Annex_D_Fig_4.p
 
 For each zoom level _n_, there are 2^_n_^ tiles across and 2^_n_^ tiles down. Each tile is 256 pixels across by 256 pixels down. Therefore, the total number of pixels at zoom-level _n_ that lie on the _x_-axis between _x_ = - 14 440 759.350252 and _x_ = 18 440 759.350252 (an interval of length of _32 881 518.700504_ is 256*2^n^ = 2^_n+8_^. The ratio of meters on the _x_ -axis to pixels on the _x_-axis is therefore:
 
-image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Ratio_X_Y_Pixels.png[image]
+image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Ratio_X_Y_Pixels.png[image,width=200,height=50]
 
 The meters/pixel ratio for the _y_-axis is the same. One pixel on the _x_- or _y_-axis is the above number of meters. One pixel on the small-device screen is assumed to be 0.28mm. This is a conventional number, and treated as if its accuracy was 0.2800000000000000mm. These numbers and formulas lead to the quantity “Scale Demoninator” used in the XML examples in the WMTS standard, as follows:  
 
@@ -62,7 +62,9 @@ The above discussion of scale was confined entirely to the pixel size _on the de
 image:extracted-media/media/image12.png[image,width=608,height=83]
 
 ::
-*Example 3. At zoom level _n_ = 5, the ratio, meters(Earth)/pixel, for latitude 60°N is 3767.81. This number can be computed as the value at the Pole (see Example 2) times the ratio* image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Example_3_Ratio.png[image,width=150,height=35]
+*Example 3. At zoom level _n_ = 5, the ratio, meters(Earth)/pixel, for latitude 60°N is 3767.81. This number can be computed as the value at the Pole (see Example 2) times the ratio:*
+
+image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Example_3_Ratio.png[image,width=200,height=50]
 
 *UPS South (Full Tiling) *
 
