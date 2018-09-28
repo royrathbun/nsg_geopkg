@@ -64,12 +64,13 @@ image:extracted-media/media/image12.png[image,width=608,height=83]
 ::
 *Example 3. At zoom level _n_ = 5, the ratio, meters(Earth)/pixel, for latitude 60°N is 3767.81. This number can be computed as the value at the Pole (see Example 2) times the ratio:*
 
+::
 image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Example_3_Ratio.png[image,width=200,height=50]
 
-*UPS South (Full Tiling) *
+*UPS South (Full Tiling)*
 
-The situation for UPS South is similar to the foregoing. The EPSG code is EPSG:: 5042. The x- and y-limits of projections are the same. It is symmetric in every way to UPS North, except, of course, the geography is different. Fig. 5 shows the portions of the world covered:
+The situation for UPS South is similar to the foregoing. The EPSG code is EPSG::5042. The x- and y-limits of projections are the same. It is symmetric in every way to UPS North, except, of course, the geography is different. Fig. 5 shows the portions of the world covered:
 
-image:extracted-media/media/image13.png[image,width=596,height=474]
+image:https://github.com/royrathbun/nsg_geopkg/blob/master/media/Annex_D_Fig_5.png[image]
 
 Fig 5. The Outside square is the single tile for zoom level 0. Its center is the south Pole with UPS coordinates (x,y) = (2 000 000, 2 000 000). Zoom level 1 is obtained by dividing it into 4 squares that abut each other along the 90°W, 0°E, 90°E, and 180°E meridians. The labels are shown every one million meters. Shown in blue are meridians and parallels at 15° intervals from the Prime Meridian and Equator, respectively. Small pieces of the 30°N parallel are shown.
