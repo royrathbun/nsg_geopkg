@@ -84,50 +84,14 @@ For each spatial index in a GeoPackage, corresponding insert, update and delete 
 
 
 where <t> and <c> are replaced with the names of the feature table and geometry column being indexed and <i> is replaced with the name of the feature table integer primary key column.
-_________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-GeoPackage SQLite Configuration
+*.F.8.1.4  GeoPackage SQLite Configuration
 
 [cols=",,,",options="header",]
 |========================================================================
-|Setting |Option a|
-_____________
-Shall
-
-/ Not (Value)
-_____________
-
- |Discussion
-|compile a|
-___________________
-SQLITE_ENABLE_RTREE
-___________________
-
- a|
-_____
-Shall
-_____
-
- a|
-______________________________________________
-Rtrees are used for GeoPackage Spatial Indexes
-______________________________________________
-
-|compile a|
-_____________________
-SQLITE_RTREE_INT_ONLY
-_____________________
-
- a|
-___
-Not
-___
-
- a|
-_________________________________________________________________________
-Rtrees with floating point values are used for GeoPackage Spatial Indexes
-_________________________________________________________________________
-
+|Setting |Option | Shall / Not (Value) | Discussion
+|compile | SQLITE_ENABLE_RTREE | Shall | Rtrees are used for GeoPackage Spatial Indexes
+|compile | SQLITE_RTREE_INT_ONLY | Not  |  Rtrees with floating point values are used for GeoPackage Spatial Indexes
 |========================================================================
 
 GeoPackage SQLite Extension
