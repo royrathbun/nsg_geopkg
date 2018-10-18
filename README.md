@@ -30,7 +30,7 @@ ___________________________________________________________________
 
 *Geospatial Intelligence Standards Center of Excellence*
 
-# Table of Contents
+## Table of Contents
 1.  Introduction 5  
 2.  Scope 5  
 3.  References 7  
@@ -62,7 +62,7 @@ Annex E Implementation Guide for EPSG::4326 Tiles 58
 
 Annex F Rtree Spatial Index Extension (Normative) 64
 
-# List of Tables 
+## List of Tables 
 
 Table 1: Profile / Standard Clause Crosswalk 7
 
@@ -136,7 +136,7 @@ Table 35: WGS 84 Geodetic gpkg_tile_matrix table 61
 
 Table 36: WGS 84 Geodetic tiles table 63
 
-# List of Figures
+## List of Figures
 
 Figure 1: GeoPackage Metadata References 37
 
