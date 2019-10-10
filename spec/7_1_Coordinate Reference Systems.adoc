@@ -57,28 +57,7 @@ Table 4: Raster Tile Pyramid Coordinate Reference Systems recommended for use in
 
 [cols=",,,,",options="header",]
 |======================================================
-|*CRS Name* a|
-*CRS*
-
-*AUTH*
-
-*ID*
-
- a|
-*CRS*
-
-*Type*
-
- a|
-*CRS*
-
-*Dim*
-
- a|
-*CRS*
-
-*Def*
-
+|*CRS Name* a| *CRS* *AUTH* *ID* a|*CRS* *Type* a| *CRS* *Dim* a|*CRS**Def*
 |WGS 84 Geographic 2D |EPSG 4326 |GEOD |2 |Table 8
 |WGS 84 / World Mercator |EPSG 3395 |PROJ |2 |Table 9
 |WGS 84 / UPS North (E,N) |EPSG 5041 |PROJ |2 |Table 10
